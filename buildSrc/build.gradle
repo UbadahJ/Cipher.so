@@ -12,6 +12,9 @@ repositories {
     mavenCentral()
     jcenter()
     google()
+    maven {
+        url 'https://jitpack.io'
+    }
 }
 
 dependencies {
@@ -59,8 +62,6 @@ gradlePlugin {
     plugins {
         CipherSoPlugin {
             id = "com.github.ubadahj.cipherso"
-            displayName = 'Cipher for Android'
-            description = 'A sample way to store secure message in .so librarly'
             implementationClass = "net.idik.lib.cipher.so.plugin.CipherSoPlugin"
         }
     }
@@ -69,7 +70,14 @@ gradlePlugin {
 pluginBundle {
     website = 'https://github.com/UbadahJ/Cipher.so'
     vcsUrl = 'https://github.com/UbadahJ/Cipher.so'
+    description = 'A sample way to store secure message in .so librarly'
     tags = ['cipher', 'encryption']
+
+    plugins {
+        CipherSoPlugin {
+            displayName = 'Cipher for Android'
+        }
+    }
 }
 
 publishing {
