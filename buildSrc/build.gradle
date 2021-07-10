@@ -1,7 +1,8 @@
 plugins {
+    id 'com.gradle.plugin-publish' version '0.15.0'
     id 'java-gradle-plugin'
-    id 'groovy'
     id 'maven-publish'
+    id 'groovy'
 }
 
 group = "com.github.ubadahj"
@@ -56,9 +57,25 @@ tasks['jar'].finalizedBy zipNativeArchive
 
 gradlePlugin {
     plugins {
-        create("CipherSoPlugin") {
+        CipherSoPlugin {
             id = "com.github.ubadahj.cipherso"
+            displayName = 'Cipher for Android'
+            description = 'A sample way to store secure message in .so librarly'
             implementationClass = "net.idik.lib.cipher.so.plugin.CipherSoPlugin"
+        }
+    }
+}
+
+pluginBundle {
+    website = 'https://github.com/UbadahJ/Cipher.so'
+    vcsUrl = 'https://github.com/UbadahJ/Cipher.so'
+    tags = ['cipher', 'encryption']
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
         }
     }
 }
