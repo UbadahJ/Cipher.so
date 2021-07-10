@@ -1,22 +1,17 @@
 package net.idik.lib.cipher.so.sample;
 
-import android.app.ActivityManager;
-import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.widget.TextView;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import net.idik.lib.cipher.so.CipherClient;
 import net.idik.lib.cipher.so.SignatureUtils;
-import net.idik.lib.cipher.so.sample.R;
 
 public class MainActivity extends AppCompatActivity {
 
