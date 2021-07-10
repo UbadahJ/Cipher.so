@@ -1,1 +1,2 @@
+rootProject.name = 'CipherSoPlugin'
 include ':sample', ':devso', ':sample2'
